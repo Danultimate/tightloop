@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+  <!-- terminal window -->
+  <rect x="0" y="0" width="760" height="460" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <rect x="0" y="0" width="760" height="34" rx="10" fill="#161b22"/>
+  <rect x="0" y="20" width="760" height="14" fill="#161b22"/>
+  <circle cx="22" cy="17" r="6" fill="#f85149"/>
+  <circle cx="42" cy="17" r="6" fill="#d29922"/>
+  <circle cx="62" cy="17" r="6" fill="#3fb950"/>
+  <text x="380" y="22" fill="#8b949e" text-anchor="middle" font-size="12">loop — TestFixLoop</text>
+
+  <g fill="#e6edf3">
+    <text x="20" y="62" opacity="0">
+      <tspan fill="#3fb950">$</tspan> python fix_tests.py
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="0.4s" fill="freeze"/>
+    </text>
+    <text x="20" y="88" fill="#8b949e" opacity="0">[loop] goal='Fix failing tests' | limits: 20 iterations, 500,000 tokens, 1800s
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="1.0s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="120" opacity="0">
+      <tspan fill="#58a6ff">► iteration 0</tspan><tspan fill="#8b949e">  observe:</tspan> 3 tests failing
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="1.8s" fill="freeze"/>
+    </text>
+    <text x="20" y="142" opacity="0">
+      <tspan fill="#8b949e">  plan:</tspan> fix off-by-one in parser.py
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="2.6s" fill="freeze"/>
+    </text>
+    <text x="20" y="164" opacity="0">
+      <tspan fill="#8b949e">  action</tspan> edit_file(parser.py) <tspan fill="#3fb950">→ ok</tspan>
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="3.4s" fill="freeze"/>
+    </text>
+    <text x="20" y="186" opacity="0">
+      <tspan fill="#8b949e">  metric:</tspan> 3 → 1 failing <tspan fill="#3fb950">(trend: improving)</tspan>
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="4.2s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="218" opacity="0">
+      <tspan fill="#58a6ff">► iteration 1</tspan><tspan fill="#8b949e">  observe:</tspan> 1 test failing
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="5.0s" fill="freeze"/>
+    </text>
+    <text x="20" y="240" opacity="0">
+      <tspan fill="#8b949e">  action</tspan> edit_file(utils.py) <tspan fill="#d29922">requires approval…</tspan> <tspan fill="#3fb950">approved</tspan>
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="5.8s" fill="freeze"/>
+    </text>
+    <text x="20" y="262" opacity="0">
+      <tspan fill="#8b949e">  metric:</tspan> 1 → 0 failing <tspan fill="#3fb950">(trend: improving)</tspan>
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="6.6s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="294" opacity="0">
+      <tspan fill="#58a6ff">► iteration 2</tspan><tspan fill="#8b949e">  observe:</tspan> all tests passing
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="7.4s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="328" opacity="0">
+      <tspan fill="#3fb950" font-weight="bold">✔ SUCCESS</tspan> in 3 iterations · 14,210 tokens · ~$0.18
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="8.2s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="364" opacity="0">
+      <tspan fill="#3fb950">$</tspan> loop.explain()
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="9.2s" fill="freeze"/>
+    </text>
+    <text x="20" y="390" fill="#8b949e" opacity="0"># Why the loop stopped: SUCCESS — goal metric reports success
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="9.9s" fill="freeze"/>
+    </text>
+    <text x="20" y="412" fill="#8b949e" opacity="0">  1. iteration 0: edit_file[ok] metric=-3.0
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="10.4s" fill="freeze"/>
+    </text>
+    <text x="20" y="434" fill="#8b949e" opacity="0">  2. iteration 1: edit_file[ok] metric=-1.0   3. exit: SUCCESS
+      <animate attributeName="opacity" to="1" dur="0.2s" begin="10.9s" fill="freeze"/>
+    </text>
+  </g>
+</svg>
